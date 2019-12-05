@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+ seven:
+  image: nginx
+  container_name: c8
+  ports:
+   - 8877:80
+  networks:
+   - net11
+   - net22
+networks:
+ net11:
+  driver: "bridge"
+ net22:
+  driver: "bridge"

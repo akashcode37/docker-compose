@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+ six:
+  image: nginx
+  container_name: c11
+  ports:
+   - 7337:80
+  volumes:
+   - myvol:/var/www/html/
+volumes:
+  myvol:
+   external: true
+

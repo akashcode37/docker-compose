@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+ five:
+  image: fedora:v3
+  build: 
+   context: .
+   dockerfile: akash.dockerfile
+  container_name: c6
+  ports:
+   - 8890:80
+
+   

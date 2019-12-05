@@ -1,0 +1,16 @@
+version: "3.1"
+services:
+ eight:
+  image: adminer
+  depends_on:
+   - db
+  restart: always
+  container_name: c1122
+  ports:
+   - 8080:8080
+ db:
+  image: mysql
+  restart: always
+  environment:
+   MYSQL_ROOT_PASSWORD: redhat
+  

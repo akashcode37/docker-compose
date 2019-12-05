@@ -1,0 +1,10 @@
+version: "3.1"
+services:
+  four:
+   image: centos:ak
+   build: .
+   container_name: c5
+   ports: 
+    - 7373:80
+   volumes:
+    - ./data:/var/www/html/ 
