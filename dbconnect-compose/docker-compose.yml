@@ -1,0 +1,20 @@
+version: "3.1"
+services:
+ eight:
+  image: akash:v1
+  build: .
+  environment:
+   MYSQL_HOST: web1
+  depends_on:
+   - db
+  restart: always
+  container_name: c1122
+  ports:
+   - 8080:80
+ db:
+  image: mysql
+  restart: always
+  container_name: web1
+  environment:
+    MYSQL_ROOT_PASSWORD: akash123
+
