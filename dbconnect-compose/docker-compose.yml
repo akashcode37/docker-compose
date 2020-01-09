@@ -12,9 +12,12 @@ services:
   ports:
    - 8080:80
  db:
-  image: mysql
+  image: mysql:v1
+  build:
+          context: .
+          dockerfile: mysql.dockerfile
   restart: always
   container_name: web1
   environment:
-    MYSQL_ROOT_PASSWORD: akash123
+   MYSQL_ROOT_PASSWORD: akash123
 

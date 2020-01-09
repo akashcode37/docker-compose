@@ -8,7 +8,7 @@ import os
 import mysql.connector
 
 mydb = mysql.connector.connect(
-  host="os.environ['MYSQL_HOST']",
+  host=os.environ['MYSQL_HOST'],
   user="root",
   passwd="akash123",
   database="users"
